@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotel - SnowLine Escape</title>
+<link rel="stylesheet" href="style.css">
+<style>
+:root {
+  --primary-color: #0d3b66;
+  --accent-color: #ff6b6b;
+  --bg-light: #f9f9f9;
+  --text-dark: #333;
+  --text-light: #fff;
+}
+body { margin:0; font-family: Arial, sans-serif; background: var(--bg-light); color: var(--text-dark);}
+header nav { background: var(--primary-color); padding:12px; text-align:center; }
+header nav a { color: var(--text-light); margin:0 12px; text-decoration:none; font-weight:bold; }
+header nav a:hover { color: var(--accent-color); }
+
+.hero { background:url('images/hotel2.jpg') center/cover no-repeat; color: var(--text-light); text-align:center; padding:80px 20px; border-radius:8px;}
+.hero h1 { font-size:42px; margin-bottom:10px; text-shadow:1px 1px 5px rgba(0,0,0,0.5);}
+.hero p { font-size:18px; text-shadow:1px 1px 4px rgba(0,0,0,0.5);}
+
+.section { max-width:1000px; margin:40px auto; padding:0 20px;}
+.section h2 { text-align:center; margin-bottom:20px;}
+.section img { width:100%; max-width:500px; display:block; margin:20px auto; border-radius:8px;}
+.section p { font-size:16px; line-height:1.8; margin-bottom:15px; text-align:justify;}
+
+.cards { display:flex; flex-wrap:wrap; gap:20px; justify-content:center;}
+.card { background:#fff; border-radius:8px; padding:15px; width:240px; text-align:center; box-shadow:0 2px 8px rgba(0,0,0,0.1);}
+.card img { width:100%; border-radius:6px; margin-bottom:10px;}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="hotel.html">Hotel</a>
+    <a href="products.html">Products</a>
+    <a href="news.html">News</a>
+    <a href="contacts.html">Contact</a>
+    <a href="login.html">Login</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>SnowLine Escape Hotel</h1>
+  <p>Luxury, comfort, and breathtaking mountain views</p>
+</div>
+
+<div class="section">
+  <h2>About Our Hotel</h2>
+  <p>1. Our hotel offers a unique combination of luxury and adventure for all winter enthusiasts.</p>
+  <p>2. Each room is designed with comfort in mind, featuring modern furniture and scenic mountain views.</p>
+  <p>3. Enjoy our spacious suites with private balconies that overlook the snowy slopes.</p>
+  <p>4. The hotel restaurant serves gourmet meals, hot drinks, and snacks with locally sourced ingredients.</p>
+  <p>5. Our friendly staff ensures that every guest has a memorable stay and personalized service.</p>
+  <p>6. Families can enjoy special activities for kids, ensuring fun and safety for all ages.</p>
+  <p>7. Relax in our cozy lounge areas with fireplaces after a long day on the slopes.</p>
+  <p>8. Our spa and wellness facilities offer massages, hot tubs, and sauna experiences.</p>
+  <p>9. Easy access to ski lifts and rental equipment makes your winter adventure seamless.</p>
+  <p>10. SnowLine Escape Hotel is dedicated to creating lasting memories for our guests, combining luxury, adventure, and relaxation.</p>
+
+  <h2>Gallery</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="images/hotel1.jpg" alt="Room 1">
+      <p>Luxury Room 1</p>
+    </div>
+    <div class="card">
+      <img src="images/hotel3.jpg" alt="Room 2">
+      <p>Luxury Room 2</p>
+    </div>
+    <div class="card">
+      <img src="images/hotel2.jpg" alt="Hotel Exterior 1">
+      <p>Exterior View 1</p>
+    </div>
+    <div class="card">
+      <img src="images/hotel4.jpg" alt="Hotel Exterior 2">
+      <p>Exterior View 2</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
