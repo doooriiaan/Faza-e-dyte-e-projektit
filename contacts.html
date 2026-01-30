@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - SnowLine Escape</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+.container{max-width:1000px;margin:0 auto;padding:20px;}
+.contact-grid{display:flex;gap:24px;align-items:flex-start;}
+.contact-info{flex:1;padding:18px;background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.04);}
+.contact-form{flex:1;padding:18px;background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.04);}
+.contact-form form{display:flex;flex-direction:column;gap:10px;}
+.contact-form input, .contact-form textarea{padding:10px;border:1px solid #ddd;border-radius:6px;}
+.contact-form button{padding:10px;border:none;background:#0a74da;color:#fff;border-radius:6px;cursor:pointer;}
+@media (max-width:800px){.contact-grid{flex-direction:column}}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="news.html">News</a>
+    <a href="contacts.html">Contact</a>
+    <a href="login.html">Login</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>Contact Us</h2>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h3>Get in touch</h3>
+      <p>Email: info@snowlineescape.com</p>
+      <p>Phone: +355 00 000 000</p>
+      <p>Address: Mountain Lodge Road, Ski Valley</p>
+      <p>Opening Hours: Mon–Sun 08:00–20:00</p>
+    </div>
+
+    <div class="contact-form">
+      <h3>Send a message</h3>
+      <form action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <textarea name="message" rows="6" placeholder="Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  
+  <div class="footer-content">
+    <div class="footer-logo">
+      <i class="fas fa-snowflake"></i>
+      <span>SnowLine Escape</span>
+    </div>
+    <p class="footer-about">Winter adventures, ski passes, snowboarding fun.</p>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 SnowLine Escape. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

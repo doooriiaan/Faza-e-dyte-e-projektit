@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>News - SnowLine Escape</title>
+<link rel="stylesheet" href="style.css">
+<style>
+:root {
+  --primary-color: #0d3b66;
+  --accent-color: #ff6b6b;
+  --bg-light: #f9f9f9;
+  --text-dark: #333;
+  --text-light: #fff;
+}
+
+body { 
+  margin:0; 
+  font-family: Arial, sans-serif; 
+  background: var(--bg-light); 
+  color: var(--text-dark);
+}
+
+header nav { 
+  background: var(--primary-color); 
+  padding:12px; 
+  text-align:center; 
+}
+
+header nav a { 
+  color: var(--text-light); 
+  margin:0 12px; 
+  text-decoration:none; 
+  font-weight:bold; 
+}
+
+header nav a:hover { 
+  color: var(--accent-color); 
+}
+
+.container { 
+  max-width:1200px; 
+  margin:40px auto; 
+  padding:0 20px;
+}
+
+.container h2 { 
+  text-align:center; 
+  margin-bottom:30px; 
+  font-size:32px;
+}
+
+.news-grid { 
+  display:grid; 
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  gap:20px;
+}
+
+.news-card { 
+  background:#fff; 
+  border-radius:12px; 
+  overflow:hidden; 
+  box-shadow:0 4px 12px rgba(0,0,0,0.1); 
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.news-card:hover { 
+  transform: translateY(-5px); 
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+.news-card img { 
+  width:100%; 
+  display:block;
+  border-bottom: 1px solid #eee;
+  height:180px;
+  object-fit:cover;
+}
+
+.news-card-content { 
+  padding:15px;
+}
+
+.news-card-content h3 { 
+  font-size:18px; 
+  margin-bottom:10px; 
+  color: var(--primary-color);
+}
+
+.news-card-content p { 
+  font-size:14px; 
+  line-height:1.5; 
+  color:#555;
+}
+
+/* Responsive */
+@media (max-width:600px){
+  .news-card img { height:150px; }
+  .news-card-content h3 { font-size:16px; }
+  .news-card-content p { font-size:13px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="hotel.html">Hotel</a>
+    <a href="products.html">Products</a>
+    <a href="news.html">News</a>
+    <a href="contacts.html">Contact</a>
+    <a href="login.html">Login</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>Latest News & Updates</h2>
+  
+  <div class="news-grid">
+
+    <div class="news-card">
+      <img src="images/pool.jpg" alt="Pool">
+      <div class="news-card-content">
+        <h3>🏊 Pool Now Open!</h3>
+        <p>Our indoor pool is officially open for guests! Swim, relax, and enjoy the stunning mountain views.</p>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <img src="images/kidsactivities.jpg" alt="Kids Activities">
+      <div class="news-card-content">
+        <h3>👶 Kids Activities</h3>
+        <p>Fun activities for children are available daily, including snow games, arts, and crafts in our activity center.</p>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <img src="images/hotel3.jpg" alt="New Rooms">
+      <div class="news-card-content">
+        <h3>🛏 New Rooms Ready</h3>
+        <p>Two newly renovated suites with mountain views are now available for booking, perfect for families and couples.</p>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <img src="images/dining.webp" alt="Dining">
+      <div class="news-card-content">
+        <h3>🍽 Gourmet Dining</h3>
+        <p>Enjoy our newly launched menu featuring local and international cuisine, with options for every taste.</p>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <img src="images/ski_pass.jpg" alt="Winter Adventure">
+      <div class="news-card-content">
+        <h3>❄ Winter Adventure</h3>
+        <p>Book our ski and snowboard packages for an unforgettable winter adventure on our pristine slopes.</p>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <img src="images/cozy.jpg" alt="Cozy Fireplaces">
+      <div class="news-card-content">
+        <h3>🔥 Cozy Fireplaces</h3>
+        <p>Relax by the fireplace in our lounge areas after a day of skiing or snowboarding. Hot drinks included!</p>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <img src="images/spa.avif" alt="Spa & Wellness">
+      <div class="news-card-content">
+        <h3>🧖 Spa & Wellness</h3>
+        <p>Our spa facilities are now open, offering massages, sauna, and relaxation sessions to refresh your body and mind.</p>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <img src="images/mountain.jpg" alt="Mountain View">
+      <div class="news-card-content">
+        <h3>🏔 Mountain View Upgrade</h3>
+        <p>We’ve enhanced the mountain viewing areas for guests to enjoy breathtaking scenery from every corner.</p>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <img src="images/menu.webp" alt="New Restaurant Menu">
+      <div class="news-card-content">
+        <h3>🍷 New Restaurant Menu</h3>
+        <p>Discover our new culinary creations and seasonal specials designed for every palate.</p>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <img src="images/skilift.jpg" alt="Ski Lift">
+      <div class="news-card-content">
+        <h3>🚡 Ski Lift Upgrade</h3>
+        <p>New ski lifts now reduce waiting times, giving you more time to enjoy the slopes.</p>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <img src="images/yoga.jpg" alt="Yoga Sessions">
+      <div class="news-card-content">
+        <h3>🧘 Yoga Sessions</h3>
+        <p>Daily yoga and meditation classes are available in our wellness center for relaxation and balance.</p>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <img src="images/events.jpg" alt="Seasonal Events">
+      <div class="news-card-content">
+        <h3>🎆 Seasonal Events</h3>
+        <p>Join our special seasonal events and celebrations throughout the year, perfect for families and couples.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

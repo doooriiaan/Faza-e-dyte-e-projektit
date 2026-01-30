@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SnowLine Escape - Home</title>
+<link rel="stylesheet" href="style.css">
+<style>
+:root {
+  --primary-color: #0d3b66;
+  --accent-color: #ff6b6b;
+  --bg-light: #f9f9f9;
+  --text-dark: #333;
+  --text-light: #fff;
+}
+body { margin:0; font-family: Arial, sans-serif; background: var(--bg-light); color: var(--text-dark);}
+header nav { background: var(--primary-color); padding:12px; text-align:center; }
+header nav a { color: var(--text-light); margin:0 12px; text-decoration:none; font-weight:bold; }
+header nav a:hover { color: var(--accent-color); }
+.hero { background:url('images/hotel2.jpg') center/cover no-repeat; color: var(--text-light); text-align:center; padding:100px 20px; border-radius:8px;}
+.hero h1 { font-size:42px; margin-bottom:10px; text-shadow:1px 1px 5px rgba(0,0,0,0.5);}
+.hero p { font-size:18px; text-shadow:1px 1px 4px rgba(0,0,0,0.5);}
+.section { max-width:1100px; margin:40px auto; padding:0 20px;}
+.section h2 { text-align:center; margin-bottom:20px;}
+.cards { display:flex; flex-wrap:wrap; gap:20px; justify-content:center;}
+.card { background:#fff; border-radius:8px; padding:15px; width:240px; text-align:center; box-shadow:0 2px 8px rgba(0,0,0,0.1);}
+.card img { width:100%; border-radius:6px; margin-bottom:10px;}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="hotel.html">Hotel</a>
+    <a href="products.html">Products</a>
+    <a href="news.html">News</a>
+    <a href="contacts.html">Contact</a>
+    <a href="login.html">Login</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>Welcome to SnowLine Escape</h1>
+  <p>Your ultimate winter adventure awaits!</p>
+</div>
+
+<div class="section">
+  <h2>Featured Hotel Rooms</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="images/hotel1.jpg" alt="Room 1">
+      <p>Luxury Room 1 - Mountain View</p>
+    </div>
+    <div class="card">
+      <img src="images/hotel3.jpg" alt="Room 2">
+      <p>Luxury Room 2 - Cozy Suite</p>
+    </div>
+    <div class="card">
+      <img src="images/hotel2.jpg" alt="Exterior 1">
+      <p>Hotel Exterior View 1</p>
+    </div>
+    <div class="card">
+      <img src="images/hotel4.jpg" alt="Exterior 2">
+      <p>Hotel Exterior View 2</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Our Services & Products</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="images/ski_pass.jpg" alt="Ski Pass">
+      <p>❄ Ski Pass – Full Day</p>
+    </div>
+    <div class="card">
+      <img src="images/ski_equipment.jpg" alt="Ski Equipment">
+      <p>⛷ Ski Equipment Rental</p>
+    </div>
+    <div class="card">
+      <img src="images/snowboard.jpg" alt="Snowboard Lessons">
+      <p>🏔 Snowboard Lessons</p>
+    </div>
+    <div class="card">
+      <img src="images/cafe.jpg" alt="Mountain Café">
+      <p>☕ Mountain Café Package</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

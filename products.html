@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products - SnowLine Escape</title>
+<link rel="stylesheet" href="style.css">
+<style>
+:root {
+  --primary-color: #0d3b66;
+  --accent-color: #ff6b6b;
+  --bg-light: #f9f9f9;
+  --text-dark: #333;
+  --text-light: #fff;
+}
+body { margin:0; font-family: Arial, sans-serif; background: var(--bg-light); color: var(--text-dark);}
+header nav { background: var(--primary-color); padding:12px; text-align:center; }
+header nav a { color: var(--text-light); margin:0 12px; text-decoration:none; font-weight:bold; }
+header nav a:hover { color: var(--accent-color); }
+
+.container { max-width:1100px; margin:40px auto; padding:0 20px;}
+.container-products { display:flex; flex-wrap:wrap; gap:20px; justify-content:center;}
+.service-box { background:#fff; padding:20px; border-radius:8px; width:240px; text-align:center; box-shadow:0 2px 8px rgba(0,0,0,0.1); transition:0.3s;}
+.service-box:hover { transform:translateY(-5px); box-shadow:0 5px 15px rgba(0,0,0,0.2);}
+.service-box img { width:180px; border-radius:6px; margin-bottom:15px;}
+button { padding:8px 12px; background: var(--primary-color); color: var(--text-light); border:none; border-radius:4px; cursor:pointer; transition:0.3s;}
+button:hover { background: var(--accent-color);}
+
+/* Modal */
+.modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); justify-content:center; align-items:center; z-index:999;}
+.modal-content { background:#fff; padding:30px; border-radius:8px; width:320px; max-width:90%; text-align:center; position:relative;}
+.close-modal { position:absolute; top:10px; right:10px; background:var(--accent-color); color:#fff; border:none; padding:4px 8px; cursor:pointer; border-radius:4px;}
+input, select { width:90%; padding:8px; margin:8px 0; border-radius:4px; border:1px solid #ccc;}
+.payment-methods { display:flex; flex-direction:column; gap:8px; margin:10px 0;}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="hotel.html">Hotel</a>
+    <a href="products.html">Products</a>
+    <a href="news.html">News</a>
+    <a href="contacts.html">Contact</a>
+    <a href="login.html">Login</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>Our Products & Services</h2>
+  <div class="container-products">
+
+    <!-- Ski Pass -->
+    <div class="service-box">
+      <h3>❄ Ski Pass – Full Day</h3>
+      <img src="images/ski_pass.jpg" alt="Ski Pass">
+      <p>Access to all ski slopes for an entire day.</p>
+      <p>Price: €50</p>
+      <button onclick="openModal('Ski Pass – Full Day', 50, 'images/ski_pass.jpg')">Buy</button>
+    </div>
+
+    <!-- Ski Equipment -->
+    <div class="service-box">
+      <h3>⛷ Ski Equipment Rental</h3>
+      <img src="images/ski_equipment.jpg" alt="Ski Equipment">
+      <p>High-quality skis, boots, helmets, and more.</p>
+      <p>Price: €30</p>
+      <button onclick="openModal('Ski Equipment Rental', 30, 'images/ski_equipment.jpg')">Buy</button>
+    </div>
+
+    <!-- Snowboard Lessons -->
+    <div class="service-box">
+      <h3>🏔 Snowboard Lessons</h3>
+      <img src="images/snowboard.jpg" alt="Snowboard Lessons">
+      <p>Professional trainers for all levels.</p>
+      <p>Price: €40</p>
+      <button onclick="openModal('Snowboard Lessons', 40, 'images/snowboard.jpg')">Buy</button>
+    </div>
+
+    <!-- Mountain Café -->
+    <div class="service-box">
+      <h3>☕ Mountain Café Package</h3>
+      <img src="images/cafe.jpg" alt="Mountain Café">
+      <p>Enjoy hot drinks and snacks at the top of the mountain.</p>
+      <p>Price: €15</p>
+      <button onclick="openModal('Mountain Café Package', 15, 'images/cafe.jpg')">Buy</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- Payment Modal -->
+<div class="modal" id="paymentModal">
+  <div class="modal-content">
+    <button class="close-modal" onclick="closeModal()">X</button>
+    <h3 id="modalTitle">Product</h3>
+    <img id="modalImg" src="" alt="" style="width:200px; border-radius:6px; margin-bottom:10px;">
+    <p>Price: €<span id="modalPrice">0</span></p>
+
+    <form id="paymentForm" onsubmit="return payNow(event)">
+      <input type="text" id="payName" placeholder="Full Name" required>
+      <input type="email" id="payEmail" placeholder="Email" required>
+      <input type="text" id="payCard" placeholder="Card Number" required>
+
+      <div class="payment-methods">
+        <label><input type="radio" name="method" value="Credit Card" checked> Credit Card</label>
+        <label><input type="radio" name="method" value="PayPal"> PayPal</label>
+        <label><input type="radio" name="method" value="Bank Transfer"> Bank Transfer</label>
+      </div>
+
+      <button type="submit">Pay Now</button>
+    </form>
+  </div>
+</div>
+
+<script>
+function openModal(title, price, img){
+  document.getElementById('modalTitle').innerText = title;
+  document.getElementById('modalPrice').innerText = price;
+  document.getElementById('modalImg').src = img;
+  document.getElementById('paymentModal').style.display = 'flex';
+}
+function closeModal(){
+  document.getElementById('paymentModal').style.display = 'none';
+}
+function payNow(e){
+  e.preventDefault();
+  const method = document.querySelector('input[name="method"]:checked').value;
+  alert('Payment successful using ' + method + '!');
+  closeModal();
+  return false;
+}
+</script>
+
+</body>
+</html>
